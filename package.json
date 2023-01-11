@@ -2,7 +2,7 @@
   "name": "react-complete-guide",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://TezpurUniversityRoboticsSociety-TURS.github.io/TezpurUniversityRoboticsSociety",
+  "homepage": "http://TezpurUniversityRoboticsSociety-TURS.github.io/",
   "dependencies": {
     "@chakra-ui/react": "^2.4.6",
     "@emotion/react": "^11.10.5",

@@ -1,0 +1,46 @@
+.spinner {
+  position: fixed;
+  top: 40%;
+  left: 47%;
+  z-index: 20;
+}
+.spinner::after {
+  content: " ";
+  display: block;
+  width: 5vw;
+  height: 5vw;
+  margin: 8px;
+  border-radius: 50%;
+  border-top: 4px solid rgb(67, 12, 125);
+  border-color: rgb(67, 12, 125) transparent transparent transparent;
+  animation: spinner .8s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .spinner {
+    left: 42.5%;
+  }
+  .spinner::after {
+    width: 12vw;
+    height: 12vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .spinner {
+    left: 46%;
+  }
+  .spinner::after {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+

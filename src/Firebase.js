@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import {getStorage} from "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB_voLL6aItpgDB-DZ31Iu7vXtCpkFRIRA",
-  authDomain: "turs-6cdef.firebaseapp.com",
-  databaseURL: "https://turs-6cdef-default-rtdb.firebaseio.com",
-  projectId: "turs-6cdef",
-  storageBucket: "turs-6cdef.appspot.com",
-  messagingSenderId: "756156051616",
-  appId: "1:756156051616:web:1f712fd9cb970ce58159c5"
+  apiKey: "AIzaSyAYR4nDuUCPtfl_mAiJni37jc4o0C6ydog",
+  authDomain: "turs-details.firebaseapp.com",
+  databaseURL: "https://turs-details-default-rtdb.firebaseio.com",
+  projectId: "turs-details",
+  storageBucket: "turs-details.appspot.com",
+  messagingSenderId: "134851523992",
+  appId: "1:134851523992:web:831c363c3a672d65f567ed"
 };
 
 const app = initializeApp(firebaseConfig);

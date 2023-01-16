@@ -54,49 +54,49 @@ const Header = () => {
       >
         <Flex>
           <NavLink className={classes.active} to="/home">
-            home
+            Home
           </NavLink>
         </Flex>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/about">
-            about us
+            About Us
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/objectives">
-            objectives
+            Objectives
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/workshop">
-            workshop
+            Workshop
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/team">
-            team
+            Team
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/members">
-            members
+            Members
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/registration">
-            registration
+            Registration
           </NavLink>
         </Box>
         <Spacer />
         <Box>
           <NavLink className={classes.active} to="/blog">
-            blog
+            Blog
           </NavLink>
         </Box>
       </Flex>
@@ -128,7 +128,7 @@ const Header = () => {
                 });
               }}
             >
-              home
+              Home
             </NavLink>
           </motion.div>
 
@@ -149,7 +149,7 @@ const Header = () => {
                 });
               }}
             >
-              about us
+              About Us
             </NavLink>
           </motion.div>
 
@@ -170,7 +170,7 @@ const Header = () => {
                 });
               }}
             >
-              objectives
+              Objectives
             </NavLink>
           </motion.div>
 
@@ -191,7 +191,7 @@ const Header = () => {
                 });
               }}
             >
-              workshop
+              Workshop
             </NavLink>
           </motion.div>
 
@@ -212,7 +212,7 @@ const Header = () => {
                 });
               }}
             >
-              team
+              Team
             </NavLink>
           </motion.div>
 
@@ -233,7 +233,7 @@ const Header = () => {
                 });
               }}
             >
-              members
+              Members
             </NavLink>
           </motion.div>
 
@@ -254,7 +254,7 @@ const Header = () => {
                 });
               }}
             >
-              registration
+              Registration
             </NavLink>
           </motion.div>
           <motion.div
@@ -274,7 +274,7 @@ const Header = () => {
                 });
               }}
             >
-              blog
+              Blog
             </NavLink>
           </motion.div>
         </VStack>

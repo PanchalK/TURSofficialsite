@@ -3,6 +3,7 @@
   top: 40%;
   left: 47%;
   z-index: 20;
+  padding-top: 5rem;
 }
 .spinner::after {
   content: " ";

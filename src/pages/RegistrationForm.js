@@ -23,8 +23,6 @@ const RegistrationForm = () => {
   const EmailId = useRef();
   const PhoneNo = useRef();
   const Course = useRef();
-  const Photo = useRef();
-  const IdCard = useRef();
   const PaymentReceipt = useRef();
   const History = useHistory();
 
@@ -42,25 +40,15 @@ const RegistrationForm = () => {
     const ReceivedEmail = EmailId.current.value;
     const ReceivedPhone = PhoneNo.current.value;
     const ReceivedCourse = Course.current.value;
-    const ReceivedPhoto = Photo.current.files[0];
-    const ReceivedIdCard = IdCard.current.files[0];
     const ReceivedPayRec = PaymentReceipt.current.files[0];
 
-    const photoRef = ref(storage, `photos/${ReceivedRoll}`);
-    uploadBytes(photoRef, ReceivedPhoto).then(() => {
-      console.log("image uploaded successfully");
-    });
-    const IdCardRef = ref(storage, `Idcard/${ReceivedRoll}`);
-    uploadBytes(IdCardRef, ReceivedIdCard).then(() => {
-      console.log("idcard uploaded successfully");
-    });
     const PayRecRef = ref(storage, `paymentreceipt/${ReceivedRoll}`);
     uploadBytes(PayRecRef, ReceivedPayRec).then(() => {
       console.log("receipt uploaded successfully");
     });
 
     let url =
-      "https://turs-6cdef-default-rtdb.firebaseio.com/RegisteredMebmers.json";
+      "https://turs-details-default-rtdb.firebaseio.com/RegisteredMembers.json";
 
     fetch(url, {
       method: "POST",
@@ -186,20 +174,6 @@ const RegistrationForm = () => {
                 className={classes.input}
                 type="text"
                 ref={Course}
-                required
-              ></Input>
-              <FormLabel>Photo</FormLabel>
-              <Input
-                className={classes.input}
-                type="file"
-                ref={Photo}
-                required
-              ></Input>
-              <FormLabel>Id Card</FormLabel>
-              <Input
-                className={classes.input}
-                type="file"
-                ref={IdCard}
                 required
               ></Input>
               <FormLabel>Payment Receipt (or screen shot)</FormLabel>

@@ -17,7 +17,7 @@ function App() {
       <Header />
       <main>
         <Switch>
-          <Route path="/TURSofficialsite/" exact>
+          <Route path="/" exact>
             <Redirect to="/home"></Redirect>
           </Route>
           <Route path="/home">

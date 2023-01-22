@@ -1,5 +1,4 @@
 import Timeline from "../bodyContent/timeline/Timeline";
-import Card from "../bodyContent/Card/Card";
 import Logo from "../bodyContent/Logo/Logo";
 import Intro from "../bodyContent/Intro/Intro";
 import Objectives from "../bodyContent/Objectives/Objectives";
@@ -12,7 +11,6 @@ const Home = () => {
       <Intro />
       <Objectives />
       <Timeline/>
-      <Card />
       <Footer />
     </>
   );

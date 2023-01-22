@@ -16,10 +16,10 @@ import { useEffect, useState } from "react";
 const db = StartFirebase();
 
 const Members = () => {
-  const [data,setData] = useState([]);
+  const [data, setData] = useState([]);
   const [isLoading, LoadingHandler] = useState();
 
-  useEffect(()=>{
+  useEffect(() => {
     LoadingHandler(true);
     let records = [];
     const dbRef = ref(db, "RegisteredMembers");
@@ -30,13 +30,16 @@ const Members = () => {
       LoadingHandler(false);
       setData(records);
     });
-  },[]);
+  }, []);
 
   return (
     <div className={classes.body}>
       <h2 className={classes.heading}>List of Registered Members</h2>
       <TableContainer className={classes.table}>
-        <Table variant="striped" colorScheme="gray">
+        <Table
+          variant="striped"
+          colorScheme="gray"
+        >
           <Thead>
             <Tr>
               <Th>Roll No.</Th>

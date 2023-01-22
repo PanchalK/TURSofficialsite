@@ -47,11 +47,11 @@ const Registration = () => {
         >
           Please make payment before going to the registration page
         </Text>
-        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <Button colorScheme='teal' variant='solid' onClick={RedirectHandler}>
             <strong>Register Here</strong>
           </Button>
-        </motion.button>
+        </motion.div>
       </Box>
     </Box>
   );

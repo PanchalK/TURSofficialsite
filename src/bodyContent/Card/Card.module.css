@@ -1,14 +1,8 @@
-.body{
-    padding-bottom: 7%;
-    background-color: rgb(255, 249, 241);
-}
-
-.container{
+/* .container{
     width: 70vw;
     margin: auto;
-    /* position: relative; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+ */

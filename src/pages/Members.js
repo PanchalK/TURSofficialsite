@@ -50,16 +50,12 @@ const Members = () => {
           </Thead>
           {isLoading && <LoadingSpinner />}
           <Tbody>
-            {data.map((memberData) => {
-              return (
-                <Tr>
+            {data.map((memberData, idx) => <Tr key={idx}>
                   <Td>{memberData.rollno}</Td>
                   <Td>{memberData.name}</Td>
                   <Td>{memberData.course}</Td>
                   <Td>{memberData.semester}</Td>
-                </Tr>
-              );
-            })}
+                </Tr>)}
           </Tbody>
         </Table>
       </TableContainer>

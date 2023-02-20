@@ -18,7 +18,6 @@ const db = StartFirebase();
 const Members = () => {
   const [data, setData] = useState([]);
   const [isLoading, LoadingHandler] = useState();
-  const temp=9;
 
   useEffect(() => {
     LoadingHandler(true);

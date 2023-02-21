@@ -17,17 +17,17 @@ const db = StartFirebase();
 
 const Members = () => {
   const [data, setData] = useState([]);
-  const [isLoading, LoadingHandler] = useState();
+  const [isLoading, setIsLoading] = useState();
 
   useEffect(() => {
-    LoadingHandler(true);
+    setIsLoading(true);
     let records = [];
     const dbRef = ref(db, "RegisteredMembers");
     onValue(dbRef, (data) => {
       data.forEach((dataitems) => {
         records.push(dataitems.val());
       });
-      LoadingHandler(false);
+      setIsLoading(false);
       setData(records);
     });
   }, []);

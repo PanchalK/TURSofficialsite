@@ -1,33 +1,36 @@
 // import classes from "./Card.module.css";
-import img1 from "../img/NAYAN.jpeg";
-import img2 from "../img/ZB.jpeg";
-import img3 from "../img/ZK.jpeg";
-import img4 from "../img/BiswajitBharali.jpeg";
-import img5 from "../img/AdilBinBhutto.jpg";
-import img6 from "../img/DeepankarAcharya.jpeg";
-import img7 from "../img/DevangaBorah.jpeg";
-import img8 from "../img/DhrubaJyotiSut.jpeg";
-import img9 from "../img/KanishkaChowdhury.jpeg";
 import CardItem from "./CardItem";
-import { Flex } from "@chakra-ui/react";
+import StartFirebase from "../../FirebaseDatabase";
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-const Card = () => {
+const db = StartFirebase();
+
+const Card = (props) => {
+
+  const [memberData, setMemberData] = useState([]);
+  const [isLoading, setIsLoading] = useState();
+
+  useEffect(() => {
+    setIsLoading(true);
+    let records = [];
+    const dbRef = ref(db, "CoreMembers");
+    onValue(dbRef, (data) => {
+      data.forEach((dataitems) => {
+        records.push(dataitems.val());
+      });
+      setIsLoading(false);
+      setMemberData(records);
+    });
+  }, []);
+
   return (
     <>
-      <Flex
-        justify="space-between"
-        flexWrap="wrap"
-      >
-        <CardItem image={img1} />
-        <CardItem image={img2} />
-        <CardItem image={img3} />
-        <CardItem image={img4} />
-        <CardItem image={img5} />
-        <CardItem image={img6} />
-        <CardItem image={img7} />
-        <CardItem image={img8} />
-        <CardItem image={img9} />
-      </Flex>
+      {isLoading && <LoadingSpinner />}
+        {!isLoading && memberData.map((data, index) => {
+          return <CardItem key={index} image={props.images[index]} name={data.name} post={data.post}/>
+        })}
     </>
   );
 };

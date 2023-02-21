@@ -12,7 +12,7 @@ const Header = () => {
     <>
       <Box
         h={{ base: "8", sm: "10", md: "12", lg: "14" }}
-        bgGradient="linear(to-b, gray.500, #282A3A)"
+        bgGradient='linear(to-r, #920404, black)'
         pos="fixed"
         zIndex={11}
         w="100vw"
@@ -59,12 +59,6 @@ const Header = () => {
           </Box>
           <Spacer />
           <Box>
-            <NavLink className={classes.active} to="/workshop">
-              Workshop
-            </NavLink>
-          </Box>
-          <Spacer />
-          <Box>
             <NavLink className={classes.active} to="/team">
               Team
             </NavLink>
@@ -79,12 +73,6 @@ const Header = () => {
           <Box>
             <NavLink className={classes.active} to="/registration">
               Registration
-            </NavLink>
-          </Box>
-          <Spacer />
-          <Box>
-            <NavLink className={classes.active} to="/blog">
-              Blog
             </NavLink>
           </Box>
         </Flex>

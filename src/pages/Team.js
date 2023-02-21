@@ -1,6 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Card from "../bodyContent/Card/Card";
 import { storage } from "../Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";

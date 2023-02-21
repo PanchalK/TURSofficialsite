@@ -27,8 +27,8 @@ const CardItem = (props) => {
               alt="blank"
               w={{ base: "20vw", sm: "18vw", md: "16vw", lg: "12vw" }}
             />
-            <h4>Dr. abc </h4>
-            <p>post</p>
+            <h4>{props.name}</h4>
+            <p>{props.post}</p>
           </div>
         </Box>
         <Center

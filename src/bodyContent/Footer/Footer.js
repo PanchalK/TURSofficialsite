@@ -11,13 +11,10 @@ const Footer = () => {
         <p>
           <strong>Tezpur University Robotics Society</strong>
         </p>
-        <p>Department of CSE</p>
+        <p>Department of Computer Science and Engineering</p>
         <p>School Of Engineering, Tezpur University</p>
         <p>
-          Contact here: tursonline@gmail.com | <a href="@"> admin</a>
-        </p>
-        <p>
-          Made with <i className="fa fa-heart" aria-hidden="true"></i> in <strong>TU</strong>
+          Contact here: <a class="btn" href="mailto:roboticssocietytuofficial@gmail.com">roboticssocietytuofficial@gmail.com</a>
         </p>
       </div>
     </>

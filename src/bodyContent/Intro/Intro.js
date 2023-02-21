@@ -12,7 +12,7 @@ const Intro = () => {
           HELLO THERE
         </Heading>
         <Text fontSize={{ base: "xl", sm: "3xl", md: "4xl", lg: "5xl" }}>
-          We Are T.U.R.S.
+          We Are TURS
         </Text>
         <hr className={classes.styletwo}></hr>
         <Text

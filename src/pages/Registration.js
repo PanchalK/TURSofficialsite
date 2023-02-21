@@ -1,10 +1,30 @@
 import classes from "./Registration.module.css";
-import img1 from "../bodyContent/img/payment/QRcode.png";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {  useHistory } from "react-router-dom";
 import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { storage } from "../Firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 const Registration = () => {
+  const [image, setImage]= useState("");
+  
+  useEffect(()=>{
+    const listRef = ref(storage, 'upicode/');
+    listAll(listRef)
+    .then((res) => {
+      res.items.map((itemRef) => {
+        getDownloadURL(itemRef)
+        .then(url => {
+          setImage(url);
+        })
+      })
+    })
+    .catch((error) => {
+      console.log(error.message);
+    })
+  }, [])
+
   const History = useHistory();
   const RedirectHandler = () => {
     History.push("/registration/registerYourself");
@@ -35,7 +55,7 @@ const Registration = () => {
             whileTap={{ scale: 1.2 }}
             whileFocus={{ scale: 1.2 }}
           >
-            <img src={img1} alt=""></img>
+            <img src={image} alt=""></img>
           </motion.div>
         </Box>
         <Text

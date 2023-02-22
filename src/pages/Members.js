@@ -51,20 +51,24 @@ const Members = () => {
         <Table variant="striped" colorScheme="gray">
           <Thead>
             <Tr>
+              <Th>Sl. No.</Th>
               <Th>Roll No.</Th>
               <Th>Name</Th>
-              <Th>Course</Th>
-              <Th>Semester</Th>
+              <Th>Programme</Th>
+              <Th>Department</Th>
+              <Th>Year of Joining (TURS)</Th>
             </Tr>
           </Thead>
           {isLoading && <LoadingSpinner />}
           <Tbody>
             {data.map((memberData, idx) => (
               <Tr key={idx}>
+                <Td>{idx+1}</Td>
                 <Td>{memberData.rollno}</Td>
                 <Td>{memberData.name}</Td>
-                <Td>{memberData.course}</Td>
-                <Td>{memberData.semester}</Td>
+                <Td>{memberData.programme}</Td>
+                <Td>{memberData.department}</Td>
+                <Td><b>{memberData.yearofjoining}</b></Td>
               </Tr>
             ))}
           </Tbody>

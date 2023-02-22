@@ -44,7 +44,7 @@ const Registration = () => {
           fontSize={{ base: "12px", sm: "15px", md: "19px", lg: "23px" }}
           mb={{ base: "3%", sm: "3%", md: "3%", lg: "3%" }}
           mt={{ base: "4%", sm: "3%", md: "1%", lg: "1%" }}
-          color="#2E86C1"
+          color="#C70039"
         >
           manishkumar0917@ybl
         </Text>
@@ -68,7 +68,7 @@ const Registration = () => {
           Please make payment before going to the registration page
         </Text>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
-          <Button colorScheme='teal' variant='solid' onClick={RedirectHandler}>
+          <Button colorScheme='red' variant='solid' onClick={RedirectHandler}>
             <strong>Register Here</strong>
           </Button>
         </motion.div>

@@ -7,6 +7,7 @@ function Logo() {
   return (
     <>
       <Box
+      id="home"
         bgGradient="linear(-120deg, #ff5858 0%, #f09819 100%)"
         h={{ base: "60vh", sm: "80vh", md: "65vh", lg: "115vh" }}
       >
@@ -67,7 +68,7 @@ function Logo() {
             >
               <Text
                 fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
-                fontFamily="'Kumbh Sans', sans-serif"
+                fontFamily="'Graduate', cursive;"
               >
                 BUILD.
               </Text>
@@ -86,8 +87,8 @@ function Logo() {
               viewport={{ once: true }}
             >
               <Text
-                fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
-                fontFamily="'Kumbh Sans', sans-serif"
+                fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
+                fontFamily="'Graduate', cursive;"
               >
                 CREATE.
               </Text>
@@ -107,7 +108,7 @@ function Logo() {
             >
               <Text
                 fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
-                fontFamily="'Kumbh Sans', sans-serif"
+                fontFamily="'Graduate', cursive;"
               >
                 LEARN.
               </Text>
@@ -115,7 +116,9 @@ function Logo() {
           </HStack>
           <Text
             fontSize={{ base: "sm", sm: "md", md: "2xl", lg: "2xl" }}
-            pt={{ base: "20%", sm: "15%", md: "11%", lg: ".4%" }}
+            pt={{ base: "0.5%", sm: ".3%", md: "5%", lg: ".4%" }}
+            pl={{ base: "0.5%", sm: ".3%", md: "5%", lg: ".4%" }}
+            pr={{ base: "3%", sm: ".3%", md: "5%", lg: ".4%" }}
             fontFamily="'Nunito', sans-serif"
           >
             Tezpur University's student led robotics club aimed at creating

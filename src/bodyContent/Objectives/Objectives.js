@@ -1,23 +1,24 @@
 import classes from "./Objectives.module.css";
-import Carosel from "../Carosel/Carosel";
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 
 const Objectives = () => {
   return (
     <>
-      <VStack pt={{ base: "5%", sm: "7%", md: "9%", lg: "7%" }}>
-        <Heading fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "3xl" }}>
+      <VStack pt={{ base: "5%", sm: "7%", md: "9%", lg: "7%" }} id="objectives">
+        <Heading fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "3xl" }} fontFamily="'Josefin Sans', sans-serif">
           WHAT WE DO
         </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}>
+        <Heading fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }} fontFamily="'Josefin Sans', sans-serif">
           Our Objectives
         </Heading>
+        <hr className={classes.styletwo}></hr>
         <Box w={{ base: "80vw", sm: "80vw", md: "70vw", lg: "vw" }}>
           <Text
             textAlign="justify"
             fontSize={{ base: "14px", sm: "17px", md: "20px", lg: "24px" }}
-            mt={{ base: "5%", sm: "7%", md: "6%", lg: "7%" }}
-            mb={{ base: "6%", sm: "8%", md: "9%", lg: "10%" }}
+            mt={{ base: "5%", sm: "7%", md: "6%", lg: "3.5%" }}
+            // mb={{ base: "6%", sm: "8%", md: "9%", lg: "10%" }}
+            fontFamily="'Josefin Sans', sans-serif"
           >
             (a) Its objectives shall be scientific, technology and educational
             in character. The Society shall strive for the advancement of the
@@ -38,9 +39,7 @@ const Objectives = () => {
             of interest.
           </Text>
         </Box>
-        <div className={classes.carousel}>
-          <Carosel />
-        </div>
+
       </VStack>
     </>
   );

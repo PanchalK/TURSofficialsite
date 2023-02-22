@@ -31,7 +31,7 @@ function Logo() {
                 }}
                 viewport={{ once: true }}
               >
-                Tezpur University{" "}
+                <Text fontFamily="Black Ops One">Tezpur University</Text>
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -42,12 +42,14 @@ function Logo() {
                 }}
                 viewport={{ once: true }}
               >
-                <Text color="black">Robotics Society</Text>
+                <Text color="black" fontFamily="'Black Ops One', cursive">
+                  Robotics Society
+                </Text>
               </motion.p>
             </Heading>
           </motion.div>
           <HStack
-            spacing={{ base: "7%", sm: "7%", md: "10%", lg: "15%" }}
+            spacing={{ base: "5%", sm: "5%", md: "7%", lg: "9%" }}
             justify="center"
             pt="1%"
           >
@@ -63,7 +65,10 @@ function Logo() {
               }}
               viewport={{ once: true }}
             >
-              <Text fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}>
+              <Text
+                fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
+                fontFamily="'Kumbh Sans', sans-serif"
+              >
                 BUILD.
               </Text>
             </motion.p>
@@ -80,7 +85,10 @@ function Logo() {
               }}
               viewport={{ once: true }}
             >
-              <Text fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}>
+              <Text
+                fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
+                fontFamily="'Kumbh Sans', sans-serif"
+              >
                 CREATE.
               </Text>
             </motion.p>
@@ -97,12 +105,19 @@ function Logo() {
               }}
               viewport={{ once: true }}
             >
-              <Text fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}>
+              <Text
+                fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
+                fontFamily="'Kumbh Sans', sans-serif"
+              >
                 LEARN.
               </Text>
             </motion.p>
           </HStack>
-          <Text fontSize={{ base: "sm", sm: "md", md: "2xl", lg: "3xl" }}>
+          <Text
+            fontSize={{ base: "sm", sm: "md", md: "2xl", lg: "2xl" }}
+            pt={{ base: "20%", sm: "15%", md: "11%", lg: ".4%" }}
+            fontFamily="'Nunito', sans-serif"
+          >
             Tezpur University's student led robotics club aimed at creating
             waves in the field of robotics.
           </Text>

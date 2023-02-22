@@ -1,6 +1,6 @@
 import classes from "./Footer.module.css";
 import img1 from "../img/tu_logo.png";
-import { Image,Text } from "@chakra-ui/react";
+import { Image,Link,Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -10,19 +10,18 @@ const Footer = () => {
           src={img1}
           alt=""
           w="10%"
-          
         ></Image>
-        <Text mt={{ base: "5%", sm: "5%", md: "2%", lg: "10%" }}>
+        <Text pt={{ base: "1%", sm: "1%", md: "1%", lg: "1%" }} fontFamily="'Nunito', sans-serif">
           <strong>Tezpur University Robotics Society</strong>
         </Text>
-        <p>Department of Computer Science and Engineering</p>
-        <p>School Of Engineering, Tezpur University</p>
-        <p>
+        <Text fontFamily="'Nunito', sans-serif">Department of Computer Science and Engineering</Text>
+        <Text fontFamily="'Nunito', sans-serif">School Of Engineering, Tezpur University</Text>
+        <Text fontFamily="'Nunito', sans-serif">
           Contact here:{" "}
-          <a class="btn" href="mailto:roboticssocietytuofficial@gmail.com">
-            roboticssocietytuofficial@gmail.com
-          </a>
-        </p>
+          <Link class="btn" href="mailto:roboticssocietytuofficial@gmail.com" pt="0px">
+            <Text fontFamily="'Nunito', sans-serif">roboticssocietytuofficial@gmail.com</Text>
+          </Link>
+        </Text>
       </div>
     </>
   );

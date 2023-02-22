@@ -1,10 +1,5 @@
 import classes from "./CardItem.module.css";
-import {
-  Box,
-  Center,
-  HStack,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Center, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -19,35 +14,60 @@ const CardItem = (props) => {
         <Box
           className={`${classes.face} ${classes.face1}`}
           w={{ base: "26vw", sm: "24vw", md: "22vw", lg: "16vw" }}
-          h={{ base: "20vh", sm: "21vh", md: "24vh", lg: "40vh" }}
+          h={{ base: "21vh", sm: "23vh", md: "24vh", lg: "42vh" }}
         >
-          <div className={classes.content}>
+          <VStack
+            className={classes.content}
+            // p={{base:"5px",sm:"6px",md:"7px",lg:"16px"}}
+          >
             <Image
               src={props.image}
               alt="blank"
-              w={{ base: "20vw", sm: "18vw", md: "16vw", lg: "12vw" }}
+              w={{ base: "18vw", sm: "15vw", md: "16vw", lg: "11vw" }}
             />
-            <h4>{props.name}</h4>
-            <p>{props.post}</p>
-          </div>
+            <Text
+              fontSize={{ base: "7px", sm: "9px", md: "13px", lg: "16px" }}
+              fontFamily="'Josefin Sans', sans-serif"
+            >
+              {props.name}
+            </Text>
+            <Text
+              fontSize={{ base: "7px", sm: "9px", md: "13px", lg: "16px" }}
+              fontFamily="'Josefin Sans', sans-serif"
+            >
+              {props.post}
+            </Text>
+          </VStack>
         </Box>
         <Center
           className={`${classes.face} ${classes.face2}`}
           w={{ base: "26vw", sm: "24vw", md: "22vw", lg: "16vw" }}
           h={{ base: "4vh", sm: "6vh", md: "6vh", lg: "12vh" }}
         >
-          <HStack w={{ base: "18vw", sm: "19vw", md: "18vw", lg: "12vw" }} justify="space-between">
-            <motion.button initial={{color:"white"}} whileHover={{color:"#DDDDDD"}}>
+          <HStack
+            w={{ base: "18vw", sm: "19vw", md: "18vw", lg: "12vw" }}
+            justify="space-between"
+          >
+            <motion.button
+              initial={{ color: "white" }}
+              whileHover={{ color: "#DDDDDD" }}
+            >
               {" "}
-              <BsFacebook cursor="pointer" className={classes.icons}/>
+              <BsFacebook cursor="pointer" className={classes.icons} />
             </motion.button>
-            <motion.button initial={{color:"white"}} whileHover={{color:"#DDDDDD"}}>
+            <motion.button
+              initial={{ color: "white" }}
+              whileHover={{ color: "#DDDDDD" }}
+            >
               {" "}
-              <BsLinkedin cursor="pointer" className={classes.icons}/>
+              <BsLinkedin cursor="pointer" className={classes.icons} />
             </motion.button>
-            <motion.button initial={{color:"white"}} whileHover={{color:"#DDDDDD"}}>
+            <motion.button
+              initial={{ color: "white" }}
+              whileHover={{ color: "#DDDDDD" }}
+            >
               {" "}
-              <BsInstagram cursor="pointer" className={classes.icons}/>
+              <BsInstagram cursor="pointer" className={classes.icons} />
             </motion.button>
           </HStack>
         </Center>

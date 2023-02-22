@@ -34,7 +34,7 @@
   .rightarrow {
     position: absolute;
     top: 48%;
-    right: 5px;
+    right: 15%;
     background-color: rgb(85, 85, 85);
     z-index: 10;
     cursor: pointer;
@@ -45,7 +45,7 @@
   .leftarrow {
     position: absolute;
     top: 48%;
-    left: 5px;
+    left: 15%;
     background-color: rgb(74, 74, 74);
     z-index: 10;
     cursor: pointer;
@@ -62,4 +62,23 @@
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.05);
+  }
+  @media only screen and (min-width: 580px){
+    .rightarrow {
+      right: 14%;
+    }
+    
+    .leftarrow {
+      left: 14%;
+    }
+  }
+
+  @media only screen and (min-width: 768px){
+    .rightarrow {
+      right: 19.5%;
+    }
+    
+    .leftarrow {
+      left: 19.5%;
+    }
   }

@@ -5,6 +5,7 @@ import { GoX } from "react-icons/go";
 import { motion } from "framer-motion";
 import classes from "./Header.module.css";
 import { useState } from "react";
+import {Link} from 'react-scroll'
 
 const Header = () => {
   const [Display, DisplayHandler] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
         pos="fixed"
         zIndex={11}
         w="100vw"
-        boxShadow="md"
+        boxShadow="0 0 8px 4px #302B2B"
       >
         <Flex justify="space-between">
           <Center
@@ -41,21 +42,27 @@ const Header = () => {
           pl={{ base: "2%", sm: "5%", md: "10%", lg: "20%" }}
         >
           <Box>
-            <NavLink className={classes.active} to="/home">
-              Home
-            </NavLink>
+            <Link  to="home" smooth={true} offset={-10} duration={500}>
+            <NavLink to="/home" className={classes.active}>Home</NavLink>
+            </Link>
           </Box>
           <Spacer />
           <Box>
-            <NavLink className={classes.active} to="/about">
-              About Us
-            </NavLink>
+            <Link  to="about" smooth={true} offset={-50} duration={500} >
+              <NavLink to="/about" className={classes.active}>About Us</NavLink>
+            </Link>
           </Box>
           <Spacer />
           <Box>
-            <NavLink className={classes.active} to="/objectives">
-              Objectives
-            </NavLink>
+            <Link  to="objectives" smooth={true} offset={-50} duration={500}>
+            <NavLink to="/objectives" className={classes.active}>Objectives</NavLink>
+            </Link>
+          </Box>
+          <Spacer />
+          <Box>
+            <Link to="gallery" smooth={true} offset={-50} duration={500}>
+            <NavLink to="/gallery" className={classes.active}>Gallery</NavLink>
+            </Link>
           </Box>
           <Spacer />
           <Box>

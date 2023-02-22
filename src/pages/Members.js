@@ -3,6 +3,7 @@ import {
   Table,
   Thead,
   Tbody,
+  Text,
   Tr,
   Th,
   Td,
@@ -34,12 +35,20 @@ const Members = () => {
 
   return (
     <div className={classes.body}>
-      <h2 className={classes.heading}>List of Registered Members</h2>
-      <TableContainer className={classes.table}>
-        <Table
-          variant="striped"
-          colorScheme="gray"
-        >
+      <Text
+        className={classes.heading}
+        fontSize={{ base: "1.3rem", sm: "1.8rem", md: "2rem", lg: "3rem" }}
+        fontFamily="'Josefin Sans', sans-serif"
+        pt={{ base: "18%", sm: "14%", md: "12%", lg: "8%" }}
+      >
+        List of Registered Members
+      </Text>
+
+      <TableContainer
+        className={classes.table}
+        mt={{ base: "8%", sm: "8%", md: "5%", lg: "3%" }}
+      >
+        <Table variant="striped" colorScheme="gray">
           <Thead>
             <Tr>
               <Th>Roll No.</Th>
@@ -50,12 +59,14 @@ const Members = () => {
           </Thead>
           {isLoading && <LoadingSpinner />}
           <Tbody>
-            {data.map((memberData, idx) => <Tr key={idx}>
-                  <Td>{memberData.rollno}</Td>
-                  <Td>{memberData.name}</Td>
-                  <Td>{memberData.course}</Td>
-                  <Td>{memberData.semester}</Td>
-                </Tr>)}
+            {data.map((memberData, idx) => (
+              <Tr key={idx}>
+                <Td>{memberData.rollno}</Td>
+                <Td>{memberData.name}</Td>
+                <Td>{memberData.course}</Td>
+                <Td>{memberData.semester}</Td>
+              </Tr>
+            ))}
           </Tbody>
         </Table>
       </TableContainer>

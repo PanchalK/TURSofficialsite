@@ -10,7 +10,6 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Select,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -18,12 +17,17 @@ import {
 const RegistrationForm = () => {
   const name = useRef();
   const RollNo = useRef();
-  const Gender = useRef();
-  const Semester = useRef();
   const EmailId = useRef();
   const PhoneNo = useRef();
-  const Course = useRef();
+  const Programme = useRef();
+  const Department = useRef();
+  const YearOfJoining = useRef();
+  const Address = useRef();
+  const FieldOfInterest = useRef();
+  const Remarks = useRef();
+  const PaymentReferenceNo = useRef();
   const PaymentReceipt = useRef();
+
   const History = useHistory();
 
   const [isLoading, LoadingHandler] = useState();
@@ -35,11 +39,15 @@ const RegistrationForm = () => {
 
     const ReceivedName = name.current.value;
     const ReceivedRoll = RollNo.current.value;
-    const ReceivedGender = Gender.current.value;
-    const ReceivedSem = Semester.current.value;
     const ReceivedEmail = EmailId.current.value;
     const ReceivedPhone = PhoneNo.current.value;
-    const ReceivedCourse = Course.current.value;
+    const ReceivedProgramme = Programme.current.value;
+    const ReceivedDepartment = Department.current.value;
+    const ReceivedYearOfJoining = YearOfJoining.current.value;
+    const ReceivedAddress = Address.current.value;
+    const ReceivedFieldOfInterest = FieldOfInterest.current.value;
+    const ReceivedRemarks = Remarks.current.value;
+    const ReceivedPaymentReferenceNo = PaymentReferenceNo.current.value;
     const ReceivedPayRec = PaymentReceipt.current.files[0];
 
     const PayRecRef = ref(storage, `paymentreceipt/${ReceivedRoll}`);
@@ -55,11 +63,15 @@ const RegistrationForm = () => {
       body: JSON.stringify({
         name: ReceivedName,
         rollno: ReceivedRoll,
-        gender: ReceivedGender,
-        semester: ReceivedSem,
         email: ReceivedEmail,
         PhNo: ReceivedPhone,
-        course: ReceivedCourse,
+        programme: ReceivedProgramme,
+        department: ReceivedDepartment,
+        YearOfJoining : ReceivedYearOfJoining,
+        Address: ReceivedAddress,
+        FieldOfInterest: ReceivedFieldOfInterest,
+        Remarks: ReceivedRemarks,
+        PayReferenceNo : ReceivedPaymentReferenceNo,
       }),
       headers: { "Content-Type": "application/json" },
     })
@@ -96,6 +108,7 @@ const RegistrationForm = () => {
           <Text
             fontSize={{ base: "14px", sm: "17px", md: "20px", lg: "24px" }}
             mb={{ base: "5%", sm: "4%", md: "3%", lg: "2%" }}
+            fontFamily="'Josefin Sans', sans-serif"
           >
             Fill this registration form to join TUSC
           </Text>
@@ -106,7 +119,7 @@ const RegistrationForm = () => {
             p="4%"
           >
             <form onSubmit={SubmitHandler}>
-              <FormControl isRequired>
+              <FormControl >
                 <FormLabel>Name</FormLabel>
                 <Input
                   type="text"
@@ -121,41 +134,6 @@ const RegistrationForm = () => {
                   ref={RollNo}
                   required
                 ></Input>
-                <div className={classes.select}>
-                  <div>
-                    <FormLabel>Gender</FormLabel>
-                    <Select
-                      className={classes.Sname}
-                      placeholder="Select"
-                      ref={Gender}
-                      w={{ base: "35vw", sm: "32vw", md: "25vw", lg: "20vw" }}
-                    >
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                    </Select>
-                  </div>
-                  <div>
-                    <FormLabel>Semester</FormLabel>
-                    <Select
-                      className={classes.Sname}
-                      placeholder="Select"
-                      ref={Semester}
-                      w={{ base: "35vw", sm: "32vw", md: "25vw", lg: "20vw" }}
-                    >
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                    </Select>
-                  </div>
-                </div>
                 <FormLabel>Email</FormLabel>
                 <Input
                   className={classes.input}
@@ -170,11 +148,52 @@ const RegistrationForm = () => {
                   ref={PhoneNo}
                   required
                 ></Input>
-                <FormLabel>Course</FormLabel>
+                <FormLabel>Program</FormLabel>
                 <Input
                   className={classes.input}
                   type="text"
-                  ref={Course}
+                  ref={Programme}
+                  required
+                ></Input>
+                <FormLabel>Department</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={Department}
+                  required
+                ></Input>
+                <FormLabel>Year Of Joining (TURS)</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={YearOfJoining}
+                  required
+                ></Input>
+                <FormLabel>Address</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={Address}
+                  required
+                ></Input>
+                <FormLabel>Field Of Interest</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={FieldOfInterest}
+                  required
+                ></Input>
+                <FormLabel>Remarks (if any)</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={Remarks}
+                ></Input>
+                <FormLabel>Payment Reference No.</FormLabel>
+                <Input
+                  className={classes.input}
+                  type="text"
+                  ref={PaymentReferenceNo}
                   required
                 ></Input>
                 <FormLabel>Payment Receipt (or screen shot)</FormLabel>

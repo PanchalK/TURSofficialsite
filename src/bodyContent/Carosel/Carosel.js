@@ -27,7 +27,7 @@ const Carosel = () => {
   return (
     <Flex
       className={classes.slider}
-      mb={{ base: "10%", sm: "12%", md: "13%", lg: "15%" }}
+      mb={{ base: "10%", sm: "12%", md: "13%", lg: "11%" }}
     >
       <Box fontSize={{base:"12px", sm:"18px", md:"24px",lg:"35px"}} >
         <IoIosArrowBack

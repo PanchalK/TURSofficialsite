@@ -5,10 +5,10 @@ const Objectives = () => {
   return (
     <>
       <VStack pt={{ base: "5%", sm: "7%", md: "9%", lg: "7%" }} id="objectives">
-        <Heading fontSize={{ base: "lg", sm: "xl", md: "2xl", lg: "3xl" }} fontFamily="'Josefin Sans', sans-serif">
+        <Heading fontSize={{ base: "md", sm: "lg", md: "xl", lg: "xl" }} fontFamily="'Josefin Sans', sans-serif" color="#FF5F1F">
           WHAT WE DO
         </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }} fontFamily="'Josefin Sans', sans-serif">
+        <Heading fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }} fontFamily="'Josefin Sans', sans-serif" pt={{md:"7px",lg:"10px"}}>
           Our Objectives
         </Heading>
         <hr className={classes.styletwo}></hr>

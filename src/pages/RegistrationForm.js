@@ -89,16 +89,16 @@ const RegistrationForm = () => {
       })
       .then((data) => {
         swal({
-          title: "Success!",
-          text: "Yeyy! Form submitted successfully",
+          title: "Thank you for submitting!",
+          text: "Welcome to the club!",
           icon: "success",
           buttons: false,
-          timer: 2000,
+          timer: 3000,
 
         });
         setTimeout(() => {
           History.replace("/")
-        },2000)
+        },3000)
           
       })
       .catch((err) => {

@@ -1,4 +1,3 @@
-// import classes from "./Card.module.css";
 import StudentCardItem from "./StudentCardItem";
 import StartFirebase from "../../FirebaseDatabase";
 import { ref, onValue } from "firebase/database";
@@ -29,7 +28,7 @@ const Card = (props) => {
     <>
       {isLoading && <LoadingSpinner />}
         {!isLoading && memberData.map((data, index) => {
-          return <StudentCardItem key={index} image={props.images[index]} name={data.name} post={data.post}/>
+          return <StudentCardItem key={index} image={props.images[index]} name={data.name} post={data.post} email={data.email} linkedin={data.linkedin}/>
         })}
     </>
   );

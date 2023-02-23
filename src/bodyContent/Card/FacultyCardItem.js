@@ -3,6 +3,7 @@ import { Box, Center, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import {  BsLinkedin } from "react-icons/bs"
 import {SiGmail} from "react-icons/si"
 import {FiExternalLink} from "react-icons/fi"
+
 const CardItem = (props) => {
   return (
     <>
@@ -36,7 +37,6 @@ const CardItem = (props) => {
               fontFamily="'Josefin Sans', sans-serif"
             >
               <strong>{props.post}</strong>
-              
             </Text>
           </VStack>
         </Box>

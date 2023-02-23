@@ -49,13 +49,13 @@ const CardItem = (props) => {
             w={{ base: "18vw", sm: "19vw", md: "18vw", lg: "12vw" }}
             justify="space-between"
           >
-            <a href="@" target="_blank" rel="noreferrer">
+            <a href={`mailto:${props.email}`} target="_blank" rel="noreferrer">
               <SiGmail cursor="pointer" className={classes.icons} />
             </a>
-            <a href="@" target="_blank" rel="noreferrer">
+            <a href={props.linkedin} target="_blank" rel="noreferrer">
               <BsLinkedin cursor="pointer" className={classes.icons} />
             </a>
-            <a href="@" target="_blank" rel="noreferrer">
+            <a href={props.website} target="_blank" rel="noreferrer">
               <FiExternalLink cursor="pointer" className={classes.icons} />
             </a>
           </HStack>

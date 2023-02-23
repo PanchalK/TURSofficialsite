@@ -1,16 +1,34 @@
-import React, { useState } from "react";
-import classes from "./Carosel.module.css";
-import carouselData from "./carouselData";
+import React, { useState , useEffect } from "react";
+import classes from "./Carousel.module.css";
 import { Box } from "@chakra-ui/react";
 import {
   IoIosArrowForward,
   IoIosArrowBack,
 } from "react-icons/io";
 import { Flex, Image } from "@chakra-ui/react";
+import { storage } from "../../Firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
-const Carosel = () => {
+const Carousel = () => {
   const [current, setCurrent] = useState(0);
+  const [carouselData, setCarouselData] = useState([]);
   const length = carouselData.length;
+  carouselData.sort((a, b) => a.localeCompare(b));
+
+  useEffect(() => {
+    const carouselListRef = ref(storage, "gallery/");
+    listAll(carouselListRef)
+      .then((res) => {
+        res.items.map((itemRef) => {
+          getDownloadURL(itemRef).then((url) => {
+            setCarouselData((prev) => [...prev, url]);
+          });
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -55,7 +73,7 @@ const Carosel = () => {
           >
             {index === current && (
               <Image
-                src={imageItem.image}
+                src={imageItem}
                 alt=""
                 className={classes.image}
                 w={{ base: "65vw", sm: "60vw", md: "60vw", lg: "55vw" }}
@@ -69,4 +87,4 @@ const Carosel = () => {
   );
 };
 
-export default Carosel;
+export default Carousel;

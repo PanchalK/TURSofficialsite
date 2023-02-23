@@ -4,6 +4,7 @@ import StartFirebase from "../../FirebaseDatabase";
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import classes from "./WebTeamCard.module.css"
 
 const db = StartFirebase();
 
@@ -36,7 +37,9 @@ const Card = (props) => {
         >
           Web Team
         </Text>
+
       )}
+<hr className={classes.styletwo}></hr>
       <Flex
         justify="space-evenly"
         flexWrap="wrap"

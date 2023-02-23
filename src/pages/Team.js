@@ -5,6 +5,7 @@ import FacultyCard from "../bodyContent/Card/FacultyCard";
 import WebTeamCard from "../bodyContent/Card/WebTeamCard";
 import { storage } from "../Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
+import classes  from "./Team.module.css"
 
 const Team = () => {
   const [facultyimages, setFacultyImages] = useState([]);
@@ -70,8 +71,10 @@ const Team = () => {
           fontFamily="'Josefin Sans', sans-serif"
           fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
         >
-          Team Members
+          Core Team
         </Text>
+      <hr className={classes.styletwo}></hr>
+        
         <Flex
           justify="space-between"
           flexWrap="wrap"

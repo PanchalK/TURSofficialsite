@@ -43,6 +43,7 @@ const Members = () => {
       >
         List of Registered Members
       </Text>
+      <hr className={classes.styletwo}></hr>
 
       <TableContainer
         className={classes.table}

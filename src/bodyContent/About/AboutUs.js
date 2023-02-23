@@ -1,5 +1,5 @@
 import { VStack, Heading, Text, Box, Flex } from "@chakra-ui/react";
-import classes from "./Intro.module.css";
+import classes from "./AboutUs.module.css";
 import { FaUsers } from "react-icons/fa";
 import { CgSmile } from "react-icons/cg";
 import { FaCubes } from "react-icons/fa";

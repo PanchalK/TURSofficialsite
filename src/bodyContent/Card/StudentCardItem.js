@@ -1,7 +1,7 @@
 import classes from "./CardItem.module.css";
 import { Box, Center, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
-import { motion } from "framer-motion";
+import { BsLinkedin } from "react-icons/bs";
+import {SiGmail} from "react-icons/si"
 
 const CardItem = (props) => {
   return (
@@ -32,10 +32,10 @@ const CardItem = (props) => {
               {props.name}
             </Text>
             <Text
-              fontSize={{ base: "7px", sm: "9px", md: "13px", lg: "16px" }}
+              fontSize={{ base: "6px", sm: "7px", md: "9px", lg: "12px" }}
               fontFamily="'Josefin Sans', sans-serif"
             >
-              {props.post}
+                <strong>{props.post}</strong>
             </Text>
           </VStack>
         </Box>
@@ -46,29 +46,14 @@ const CardItem = (props) => {
         >
           <HStack
             w={{ base: "18vw", sm: "19vw", md: "18vw", lg: "12vw" }}
-            justify="space-between"
+            justify="space-evenly"
           >
-            <motion.button
-              initial={{ color: "white" }}
-              whileHover={{ color: "#DDDDDD" }}
-            >
-              {" "}
-              <BsFacebook cursor="pointer" className={classes.icons} />
-            </motion.button>
-            <motion.button
-              initial={{ color: "white" }}
-              whileHover={{ color: "#DDDDDD" }}
-            >
-              {" "}
+            <a href="@" target="_blank" rel="noreferrer">
+              <SiGmail cursor="pointer" className={classes.icons} />
+            </a>
+            <a href="@" target="_blank" rel="noreferrer">
               <BsLinkedin cursor="pointer" className={classes.icons} />
-            </motion.button>
-            <motion.button
-              initial={{ color: "white" }}
-              whileHover={{ color: "#DDDDDD" }}
-            >
-              {" "}
-              <BsInstagram cursor="pointer" className={classes.icons} />
-            </motion.button>
+            </a>
           </HStack>
         </Center>
       </Box>

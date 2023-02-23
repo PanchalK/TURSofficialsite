@@ -42,6 +42,14 @@ const Team = () => {
         >
           <Card images={images} />
         </Flex>
+        <Text
+          pt={{ base: "22%", sm: "18%", md: "13%", lg: "8%" }}
+          textAlign="center"
+          fontFamily="'Josefin Sans', sans-serif"
+          fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
+        >
+          Web Team
+        </Text>
       </Box>
     </>
   );

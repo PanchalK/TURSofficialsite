@@ -1,19 +1,19 @@
 import { NavLink } from "react-router-dom";
-import { Box, Center, Flex, Spacer, VStack } from "@chakra-ui/react";
+import { Box, Center, Flex, Spacer, Text, VStack } from "@chakra-ui/react";
 import { TfiMenu } from "react-icons/tfi";
 import { GoX } from "react-icons/go";
 import { motion } from "framer-motion";
 import classes from "./Header.module.css";
 import { useState } from "react";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [Display, DisplayHandler] = useState(false);
   return (
     <>
       <Box
-        h={{ base: "8", sm: "10", md: "12", lg: "14" }}
-        bgGradient='linear(to-r, #920404, black)'
+        h={{ base: "10", sm: "12", md: "12", lg: "14" }}
+        bgGradient="linear(to-r, #920404, black)"
         pos="fixed"
         zIndex={11}
         w="100vw"
@@ -22,16 +22,17 @@ const Header = () => {
         <Flex justify="space-between">
           <Center
             className={classes.icons}
-            h={{ base: "8", sm: "10", md: "12", lg: "14" }}
-            w={{ base: "8", sm: "10", md: "12", lg: "14" }}
+            h={{ base: "9", sm: "10", md: "12", lg: "14" }}
+            w={{ base: "9", sm: "10", md: "12", lg: "14" }}
             display={{ base: "flex", sm: "flex", md: "none", lg: "none" }}
+            pl="10px"
             onClick={() => {
               DisplayHandler(() => {
                 return true;
               });
             }}
           >
-            <TfiMenu color="white" />
+            <TfiMenu color="white" size="25px" />
           </Center>
         </Flex>
         <Flex
@@ -42,26 +43,34 @@ const Header = () => {
           pl={{ base: "2%", sm: "5%", md: "10%", lg: "20%" }}
         >
           <Box>
-            <Link  to="home" smooth={true} offset={-10} duration={500}>
-            <NavLink to="/home" className={classes.active}>Home</NavLink>
+            <Link to="home" smooth={true} offset={-10} duration={500}>
+              <NavLink to="/home" className={classes.active}>
+                Home
+              </NavLink>
             </Link>
           </Box>
           <Spacer />
           <Box>
-            <Link  to="about" smooth={true} offset={-50} duration={500} >
-              <NavLink to="/about" className={classes.active}>About Us</NavLink>
+            <Link to="about" smooth={true} offset={-50} duration={500}>
+              <NavLink to="/about" className={classes.active}>
+                About Us
+              </NavLink>
             </Link>
           </Box>
           <Spacer />
           <Box>
-            <Link  to="objectives" smooth={true} offset={-50} duration={500}>
-            <NavLink to="/objectives" className={classes.active}>Objectives</NavLink>
+            <Link to="objectives" smooth={true} offset={-50} duration={500}>
+              <NavLink to="/objectives" className={classes.active}>
+                Objectives
+              </NavLink>
             </Link>
           </Box>
           <Spacer />
           <Box>
             <Link to="gallery" smooth={true} offset={-50} duration={500}>
-            <NavLink to="/gallery" className={classes.active}>Gallery</NavLink>
+              <NavLink to="/gallery" className={classes.active}>
+                Gallery
+              </NavLink>
             </Link>
           </Box>
           <Spacer />
@@ -94,14 +103,14 @@ const Header = () => {
             display={{ base: "block", sm: "block", md: "none", lg: "none" }}
           >
             <VStack
-              w={{ base: "60vw", sm: "42vw" }}
+              w={{ base: "70vw", sm: "50vw" }}
               h={{ base: "40vh", sm: "30vh" }}
-              backgroundColor="#252A3A"
+              backgroundColor=" #212F3D"
               display={Display ? "flex" : "none"}
               p="1%"
             >
               {Display && (
-                <Flex justify="flex-end">
+                <Flex justify="flex-end" mt="10px">
                   <Center
                     className={classes.icons}
                     h={{ base: "8", sm: "10", md: "12", lg: "14" }}
@@ -118,7 +127,7 @@ const Header = () => {
                       });
                     }}
                   >
-                    <GoX color="white" />
+                    <GoX color="white" size="30px" />
                   </Center>
                 </Flex>
               )}
@@ -139,70 +148,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  Home
-                </NavLink>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.2 },
-                }}
-              >
-                <NavLink
-                  className={classes.active}
-                  to="/about"
-                  onClick={() => {
-                    DisplayHandler((prev) => {
-                      return !prev;
-                    });
-                  }}
-                >
-                  About Us
-                </NavLink>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.3 },
-                }}
-              >
-                <NavLink
-                  className={classes.active}
-                  to="/objectives"
-                  onClick={() => {
-                    DisplayHandler((prev) => {
-                      return !prev;
-                    });
-                  }}
-                >
-                  Objectives
-                </NavLink>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.4 },
-                }}
-              >
-                <NavLink
-                  className={classes.active}
-                  to="/workshop"
-                  onClick={() => {
-                    DisplayHandler((prev) => {
-                      return !prev;
-                    });
-                  }}
-                >
-                  Workshop
+                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Home</Text>
                 </NavLink>
               </motion.div>
 
@@ -223,7 +169,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  Team
+                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Team</Text>
                 </NavLink>
               </motion.div>
 
@@ -244,7 +190,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  Members
+                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Members</Text>
                 </NavLink>
               </motion.div>
 
@@ -265,7 +211,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  Registration
+                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Registration</Text>
                 </NavLink>
               </motion.div>
               <motion.div
@@ -285,7 +231,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  Blog
+                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Blog</Text>
                 </NavLink>
               </motion.div>
             </VStack>

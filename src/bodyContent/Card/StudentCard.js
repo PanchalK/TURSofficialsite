@@ -1,5 +1,5 @@
 // import classes from "./Card.module.css";
-import CardItem from "./CardItem";
+import StudentCardItem from "./StudentCardItem";
 import StartFirebase from "../../FirebaseDatabase";
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ const Card = (props) => {
   useEffect(() => {
     setIsLoading(true);
     let records = [];
-    const dbRef = ref(db, "CoreMembers");
+    const dbRef = ref(db, "StudentCoreMembers");
     onValue(dbRef, (data) => {
       data.forEach((dataitems) => {
         records.push(dataitems.val());
@@ -29,7 +29,7 @@ const Card = (props) => {
     <>
       {isLoading && <LoadingSpinner />}
         {!isLoading && memberData.map((data, index) => {
-          return <CardItem key={index} image={props.images[index]} name={data.name} post={data.post}/>
+          return <StudentCardItem key={index} image={props.images[index]} name={data.name} post={data.post}/>
         })}
     </>
   );

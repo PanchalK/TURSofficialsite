@@ -5,6 +5,7 @@ import LoadingSpinner from "../bodyContent/LoadingSpinner/LoadingSpinner";
 import classes from "./RegistrationForm.module.css";
 import { storage } from "../Firebase";
 import { ref, uploadBytes } from "firebase/storage";
+import swal from 'sweetalert';
 import {
   Box,
   FormControl,
@@ -67,11 +68,11 @@ const RegistrationForm = () => {
         phno: ReceivedPhone,
         programme: ReceivedProgramme,
         department: ReceivedDepartment,
-        yearofjoining : ReceivedYearOfJoining,
+        yearofjoining: ReceivedYearOfJoining,
         address: ReceivedAddress,
         fieldofinterest: ReceivedFieldOfInterest,
         remarks: ReceivedRemarks,
-        paymentrefno : ReceivedPaymentReferenceNo,
+        paymentrefno: ReceivedPaymentReferenceNo,
       }),
       headers: { "Content-Type": "application/json" },
     })
@@ -87,8 +88,18 @@ const RegistrationForm = () => {
         }
       })
       .then((data) => {
-        alert("Successfully registered");
-        History.replace("/");
+        swal({
+          title: "Success!",
+          text: "Yeyy! Form submitted successfully",
+          icon: "success",
+          buttons: false,
+          timer: 2000,
+
+        });
+        setTimeout(() => {
+          History.replace("/")
+        },2000)
+          
       })
       .catch((err) => {
         alert(err.message);
@@ -102,11 +113,11 @@ const RegistrationForm = () => {
       >
         <motion.div className={classes.body} whileInView={{ y: [-50, 0] }}>
           {isLoading && <LoadingSpinner />}
-          <Text fontSize={{ base: "14px", sm: "17px", md: "20px", lg: "24px" }}>
+          <Text fontSize={{ base: "16px", sm: "19px", md: "20px", lg: "24px" }}>
             <strong>Register here</strong>
           </Text>
           <Text
-            fontSize={{ base: "14px", sm: "17px", md: "20px", lg: "24px" }}
+            fontSize={{ base: "16px", sm: "19px", md: "20px", lg: "24px" }}
             mb={{ base: "5%", sm: "4%", md: "3%", lg: "2%" }}
             fontFamily="'Josefin Sans', sans-serif"
           >
@@ -119,7 +130,7 @@ const RegistrationForm = () => {
             p="4%"
           >
             <form onSubmit={SubmitHandler}>
-              <FormControl >
+              <FormControl>
                 <FormLabel>Name</FormLabel>
                 <Input
                   type="text"

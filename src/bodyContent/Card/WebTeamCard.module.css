@@ -1,6 +1,6 @@
 .styletwo {
     border: 0;
-    height: 2px;
+    height: 3px;
     background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0),
@@ -13,8 +13,8 @@
 
   @media only screen and(max-width:500px) {
     .styletwo {
-        width: 20%;
-    height: 1px;
+        width: 25%;
+        height: 1px;
 
       }
     

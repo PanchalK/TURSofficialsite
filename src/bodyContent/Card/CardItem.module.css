@@ -53,6 +53,10 @@
 
 .icons{
     font-size: 1.6rem;
+    color: white;
+}
+.icons:hover{
+    color:#DDDDDD;
 }
 
 @media only screen and (max-width: 768px){

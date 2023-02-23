@@ -28,7 +28,7 @@ const Card = (props) => {
     <>
       {isLoading && <LoadingSpinner />}
         {!isLoading && memberData.map((data, index) => {
-          return <FacultyCardItem key={index} image={props.images[index]} name={data.name} post={data.post}/>
+          return <FacultyCardItem key={index} image={props.images[index]} name={data.name} post={data.post} email={data.email} linkedin={data.linkedin} website={data.website}/>
         })}
     </>
   );

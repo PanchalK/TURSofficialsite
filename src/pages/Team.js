@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Card from "../bodyContent/Card/Card";
 import { storage } from "../Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
+import classes  from "./Team.module.css"
 
 const Team = () => {
   const [images, setImages] = useState([]);
@@ -34,6 +35,8 @@ const Team = () => {
         >
           Team Members
         </Text>
+      <hr className={classes.styletwo}></hr>
+        
         <Flex
           justify="space-between"
           flexWrap="wrap"
@@ -50,6 +53,8 @@ const Team = () => {
         >
           Web Team
         </Text>
+      <hr className={classes.styletwo}></hr>
+
       </Box>
     </>
   );

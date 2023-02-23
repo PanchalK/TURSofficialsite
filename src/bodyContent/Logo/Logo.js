@@ -23,7 +23,7 @@ function Logo() {
           ></Image>
           <motion.div>
             <Heading fontSize={{ base: "lg", sm: "xl", md: "3xl", lg: "4xl" }}>
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0 }}
                 transition={{ type: "spring", duration: 1 }}
                 whileInView={{
@@ -35,8 +35,8 @@ function Logo() {
                 <Text fontFamily="Black Ops One" className={classes.slidetext}>
                   Tezpur University
                 </Text>
-              </motion.p>
-              <motion.p
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0 }}
                 transition={{ type: "spring", duration: 1 }}
                 whileInView={{
@@ -52,7 +52,7 @@ function Logo() {
                 >
                   Robotics Society
                 </Text>
-              </motion.p>
+              </motion.div>
             </Heading>
           </motion.div>
           <HStack
@@ -60,7 +60,7 @@ function Logo() {
             justify="center"
             pt="1%"
           >
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -78,8 +78,8 @@ function Logo() {
               >
                 <Text className={classes.bouncetext}>BUILD.</Text>
               </Text>
-            </motion.p>
-            <motion.p
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -99,8 +99,8 @@ function Logo() {
               >
                 <Text className={classes.bouncetext}>CREATE.</Text>
               </Text>
-            </motion.p>
-            <motion.p
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -120,7 +120,7 @@ function Logo() {
               >
                 <Text className={classes.bouncetext}>LEARN.</Text>
               </Text>
-            </motion.p>
+            </motion.div>
           </HStack>
           <Text
             fontSize={{ base: "sm", sm: "md", md: "2xl", lg: "2xl" }}

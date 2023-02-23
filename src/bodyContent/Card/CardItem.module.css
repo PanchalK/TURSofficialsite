@@ -2,7 +2,6 @@
     cursor:"pointer";
 }
 .face{
-    box-shadow: 1px 1px 10px 5px rgba(161, 161, 161, 0.521);
     transition: 0.5s;
 }
 
@@ -15,6 +14,7 @@
     z-index: 1;
     transform: translateY(100px);
     border-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px 5px rgba(161, 161, 161, 0.521);
 }
 
  .card:hover .face.face1{
@@ -44,6 +44,7 @@
     background: linear-gradient(to bottom, #7e7e7e, #101010);
     box-sizing: border-box;
     transform: translateY(-100px);
+    box-shadow: 1px 1px 5px 3px rgba(161, 161, 161, 0.521);
 }
 
 .card:hover .face.face2{
@@ -52,6 +53,10 @@
 
 .icons{
     font-size: 1.6rem;
+    color: white;
+}
+.icons:hover{
+    color:#DDDDDD;
 }
 
 @media only screen and (max-width: 768px){

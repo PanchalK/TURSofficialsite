@@ -7,7 +7,7 @@ function Logo() {
   return (
     <>
       <Box
-      id="home"
+        id="home"
         bgGradient="linear(-120deg, #ff5858 0%, #f09819 100%)"
         h={{ base: "60vh", sm: "80vh", md: "65vh", lg: "115vh" }}
       >
@@ -16,14 +16,14 @@ function Logo() {
           h={{ base: "55vh", sm: "75vh", md: "60vh", lg: "115vh" }}
         >
           <Image
-            w={{ base: "50vw", sm: "70vw", md: "50vw", lg: "35vw" }}
+            w={{ base: "55vw", sm: "70vw", md: "50vw", lg: "35vw" }}
             mt={{ base: "20%", sm: "15%", md: "11%", lg: "8%" }}
             src={imgurl}
             alt=""
           ></Image>
           <motion.div>
             <Heading fontSize={{ base: "lg", sm: "xl", md: "3xl", lg: "4xl" }}>
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0 }}
                 transition={{ type: "spring", duration: 1 }}
                 whileInView={{
@@ -32,9 +32,11 @@ function Logo() {
                 }}
                 viewport={{ once: true }}
               >
-                <Text fontFamily="Black Ops One">Tezpur University</Text>
-              </motion.p>
-              <motion.p
+                <Text fontFamily="Black Ops One" className={classes.slidetext}>
+                  Tezpur University
+                </Text>
+              </motion.div>
+              <motion.div
                 initial={{ opacity: 0 }}
                 transition={{ type: "spring", duration: 1 }}
                 whileInView={{
@@ -43,10 +45,14 @@ function Logo() {
                 }}
                 viewport={{ once: true }}
               >
-                <Text color="black" fontFamily="'Black Ops One', cursive">
+                <Text
+                  color="black"
+                  fontFamily="'Black Ops One', cursive"
+                  className={classes.slidetext}
+                >
                   Robotics Society
                 </Text>
-              </motion.p>
+              </motion.div>
             </Heading>
           </motion.div>
           <HStack
@@ -54,7 +60,7 @@ function Logo() {
             justify="center"
             pt="1%"
           >
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -70,10 +76,10 @@ function Logo() {
                 fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
                 fontFamily="'Graduate', cursive;"
               >
-                BUILD.
+                <Text className={classes.bouncetext}>BUILD.</Text>
               </Text>
-            </motion.p>
-            <motion.p
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -89,11 +95,12 @@ function Logo() {
               <Text
                 fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
                 fontFamily="'Graduate', cursive;"
+                className={classes.bouncetext}
               >
-                CREATE.
+                <Text className={classes.bouncetext}>CREATE.</Text>
               </Text>
-            </motion.p>
-            <motion.p
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
@@ -109,20 +116,24 @@ function Logo() {
               <Text
                 fontSize={{ base: "xl", sm: "2xl", md: "4xl", lg: "5xl" }}
                 fontFamily="'Graduate', cursive;"
+                className={classes.bouncetext}
               >
-                LEARN.
+                <Text className={classes.bouncetext}>LEARN.</Text>
               </Text>
-            </motion.p>
+            </motion.div>
           </HStack>
           <Text
             fontSize={{ base: "sm", sm: "md", md: "2xl", lg: "2xl" }}
             pt={{ base: "0.5%", sm: ".3%", md: "5%", lg: ".4%" }}
-            pl={{ base: "0.5%", sm: ".3%", md: "5%", lg: ".4%" }}
-            pr={{ base: "3%", sm: ".3%", md: "5%", lg: ".4%" }}
+            pl={{ base: "6%", sm: "6%", md: "5%", lg: ".4%" }}
+            pr={{ base: "6%", sm: "6%", md: "5%", lg: ".4%" }}
             fontFamily="'Nunito', sans-serif"
+            className={classes.text}
           >
-            Tezpur University's student led robotics club aimed at creating
-            waves in the field of robotics.
+            <Text className={classes.text}>
+              Tezpur University's student led robotics club aimed at creating
+              waves in the field of robotics.
+            </Text>
           </Text>
         </VStack>
       </Box>

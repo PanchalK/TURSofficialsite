@@ -11,7 +11,7 @@ const Intro = () => {
         <Heading fontSize={{ base: "md", sm: "2xl", md: "3xl", lg: "3xl" }} mt={{lg:"8%"}} fontFamily="'Josefin Sans', sans-serif">
           HELLO THERE
         </Heading>
-        <Text fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "5xl" }} fontFamily="'Josefin Sans', sans-serif">
+        <Text fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "5xl" }} fontFamily="'Josefin Sans', sans-serif" color="white">
           We Are TURS
         </Text>
         <hr className={classes.styletwo}></hr>
@@ -55,7 +55,7 @@ const Intro = () => {
               <FaUsers color="white" />
             </Box>
           
-            <Text fontSize={{ base: ".9rem", sm: "1.2rem", md: "1.5rem", lg: "1.5rem" }} fontFamily="'Josefin Sans', sans-serif">30+ Members</Text>
+            <Text fontSize={{ base: ".9rem", sm: "1.2rem", md: "1.5rem", lg: "1.5rem" }} fontFamily="'Josefin Sans', sans-serif">50+ Members</Text>
           </VStack>
           <VStack
             mb={{ base: "5px", sm: "10px", md: "40px", lg: "100px" }}

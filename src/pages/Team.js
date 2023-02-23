@@ -1,22 +1,60 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import Card from "../bodyContent/Card/Card";
+import StudentCard from "../bodyContent/Card/StudentCard";
+import FacultyCard from "../bodyContent/Card/FacultyCard";
+import WebTeamCard from "../bodyContent/Card/WebTeamCard";
 import { storage } from "../Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 const Team = () => {
-  const [images, setImages] = useState([]);
-  images.sort((a, b) => a.localeCompare(b));
+  const [facultyimages, setFacultyImages] = useState([]);
+  const [studentimages, setStudentImages] = useState([]);
+  const [webteamimages, setWebTeamImages] = useState([]);
+  facultyimages.sort((a, b) => a.localeCompare(b));
+  studentimages.sort((a, b) => a.localeCompare(b));
+  webteamimages.sort((a, b) => a.localeCompare(b));
 
   useEffect(() => {
-    const listRef = ref(storage, "coremembers/");
-    listAll(listRef)
+    const facultyListRef = ref(storage, "facultycoremembers/");
+    listAll(facultyListRef)
       .then((res) => {
         res.items.map((itemRef) => {
           getDownloadURL(itemRef).then((url) => {
-            setImages((prev) => [...prev, url]);
+            setFacultyImages((prev) => [...prev, url]);
           });
         });
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
+
+  useEffect(() => {
+    const studentListRef = ref(storage, "studentcoremembers/");
+    listAll(studentListRef)
+      .then((res) => {
+        res.items.map((itemRef) => {
+          getDownloadURL(itemRef).then((url) => {
+            setStudentImages((prev) => [...prev, url]);
+          });
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }, []);
+
+  useEffect(() => {
+    const webTeamListRef = ref(storage, "webteam/");
+    listAll(webTeamListRef)
+      .then((res) => {
+        res.items.map((itemRef) => {
+          getDownloadURL(itemRef).then((url) => {
+            setWebTeamImages((prev) => [...prev, url]);
+          });
+        });
+      })
+      .finally(()=>{
       })
       .catch((error) => {
         console.log(error.message);
@@ -40,16 +78,10 @@ const Team = () => {
           w={{ base: "85vw", sm: "85vw", md: "80vw", lg: "70vw" }}
           m="auto"
         >
-          <Card images={images} />
+          <FacultyCard images={facultyimages} />
+          <StudentCard images={studentimages} />
         </Flex>
-        <Text
-          pt={{ base: "22%", sm: "18%", md: "13%", lg: "8%" }}
-          textAlign="center"
-          fontFamily="'Josefin Sans', sans-serif"
-          fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
-        >
-          Web Team
-        </Text>
+          <WebTeamCard images={webteamimages} />
       </Box>
     </>
   );

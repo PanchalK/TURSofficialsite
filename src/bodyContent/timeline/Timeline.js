@@ -1,11 +1,26 @@
 import React from "react";
+import StartFirebase from "../../FirebaseDatabase";
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
 import classes from "./Timeline.module.css";
-// import { motion } from "framer-motion";
-import { Box, Container, Flex, Heading  } from "@chakra-ui/react";
-import timelinData from "./timelineData";
+import { Flex, Heading  } from "@chakra-ui/react";
 import TimelineItem from "./TimelineItem";
 
+const db = StartFirebase();
+
 const Timeline = () => {
+  const [timelineData, setTimelineData] = useState([]);
+  console.log(timelineData);
+  useEffect(() => {
+    let records = [];
+    const dbRef = ref(db, "UpcomingEvents");
+    onValue(dbRef, (data) => {
+      data.forEach((dataitems) => {
+        records.push(dataitems.val());
+      });
+      setTimelineData(records);
+    });
+  }, []);
   return (
     <div className={classes.Body}>
       <Heading
@@ -24,7 +39,7 @@ const Timeline = () => {
         mt={{ base: "2%", sm: "4%", md: "5%", lg: "6%" }}
         mb={{ base: "2%", sm: "4%", md: "5%", lg: "6%" }}
       >
-        {timelinData.map((data, idx) => (
+        {timelineData.map((data, idx) => (
           <TimelineItem data={data} key={idx} />
         ))}
       </Flex>

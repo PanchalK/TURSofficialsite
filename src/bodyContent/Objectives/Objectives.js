@@ -30,9 +30,9 @@ const Objectives = () => {
             <br></br>
             (b) The Society shall aid in promoting close co-operation and
             exchange of technical information among its members and to this end
-            shall hold collaborative programmes with industry, research centres,
+            shall hold collaborative programs with industry, research centres,
             educational institutes through workshops, seminars, class room
-            training, exchange programmes etc.<br></br>
+            training, exchange programs etc.<br></br>
             <br></br>
             (c) The Society shall provide facilities to students from different
             levels for carrying out their projects and other robotic activities

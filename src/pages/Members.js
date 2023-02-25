@@ -19,7 +19,7 @@ const db = StartFirebase();
 const Members = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState();
-
+  data.sort(function(a, b){return b.yearofjoining-a.yearofjoining});
   useEffect(() => {
     setIsLoading(true);
     let records = [];
@@ -55,7 +55,7 @@ const Members = () => {
               <Th>Sl. No.</Th>
               <Th>Roll No.</Th>
               <Th>Name</Th>
-              <Th>Programme</Th>
+              <Th>program</Th>
               <Th>Department</Th>
               <Th>Year of Joining (TURS)</Th>
             </Tr>
@@ -67,7 +67,7 @@ const Members = () => {
                 <Td>{idx+1}</Td>
                 <Td>{memberData.rollno}</Td>
                 <Td>{memberData.name}</Td>
-                <Td>{memberData.programme}</Td>
+                <Td>{memberData.program}</Td>
                 <Td>{memberData.department}</Td>
                 <Td><b>{memberData.yearofjoining}</b></Td>
               </Tr>

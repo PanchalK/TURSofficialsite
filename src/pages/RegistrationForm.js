@@ -20,7 +20,7 @@ const RegistrationForm = () => {
   const RollNo = useRef();
   const EmailId = useRef();
   const PhoneNo = useRef();
-  const Programme = useRef();
+  const Program = useRef();
   const Department = useRef();
   const YearOfJoining = useRef();
   const Address = useRef();
@@ -42,7 +42,7 @@ const RegistrationForm = () => {
     const ReceivedRoll = RollNo.current.value;
     const ReceivedEmail = EmailId.current.value;
     const ReceivedPhone = PhoneNo.current.value;
-    const ReceivedProgramme = Programme.current.value;
+    const Receivedprogram = Program.current.value;
     const ReceivedDepartment = Department.current.value;
     const ReceivedYearOfJoining = YearOfJoining.current.value;
     const ReceivedAddress = Address.current.value;
@@ -66,7 +66,7 @@ const RegistrationForm = () => {
         rollno: ReceivedRoll,
         email: ReceivedEmail,
         phno: ReceivedPhone,
-        programme: ReceivedProgramme,
+        program: Receivedprogram,
         department: ReceivedDepartment,
         yearofjoining: ReceivedYearOfJoining,
         address: ReceivedAddress,
@@ -163,7 +163,7 @@ const RegistrationForm = () => {
                 <Input
                   className={classes.input}
                   type="text"
-                  ref={Programme}
+                  ref={Program}
                   required
                 ></Input>
                 <FormLabel>Department</FormLabel>

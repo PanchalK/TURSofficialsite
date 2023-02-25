@@ -1,8 +1,8 @@
 import classes from "./Timeline.module.css";
 import { motion } from "framer-motion";
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
-const TimelineItem = ({ data }) => {
+const TimelineItem = ({ data }) => { 
   return (
     <Box
       className={classes["timeline-item"]}

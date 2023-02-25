@@ -19,7 +19,7 @@ const db = StartFirebase();
 const Members = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState();
-
+  data.sort(function(a, b){return b.yearofjoining-a.yearofjoining});
   useEffect(() => {
     setIsLoading(true);
     let records = [];

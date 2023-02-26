@@ -17,7 +17,6 @@ const Objectives = () => {
             textAlign="justify"
             fontSize={{ base: "14px", sm: "17px", md: "20px", lg: "24px" }}
             mt={{ base: "5%", sm: "7%", md: "6%", lg: "3.5%" }}
-            // mb={{ base: "6%", sm: "8%", md: "9%", lg: "10%" }}
             fontFamily="'Josefin Sans', sans-serif"
           >
             (a) Its objectives shall be scientific, technology and educational

@@ -18,7 +18,6 @@ const CardItem = (props) => {
         >
           <VStack
             className={classes.content}
-            // p={{base:"5px",sm:"6px",md:"7px",lg:"16px"}}
           >
             <Image
               src={props.image}

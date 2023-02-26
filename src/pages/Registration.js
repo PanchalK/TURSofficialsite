@@ -38,7 +38,7 @@ const Registration = () => {
         <Heading
           fontSize={{ base: "14px", sm: "16px", md: "20px", lg: "25px" }}
         >
-          Make your payment of 300Rs through this UPI/QRcode below
+          Pay Rs.300 using the following UPI/QRcode.
         </Heading>
         <Text
           fontSize={{ base: "12px", sm: "15px", md: "19px", lg: "23px" }}
@@ -65,7 +65,7 @@ const Registration = () => {
           mb={{ base: "5%", sm: "4%", md: "2%", lg: "2%" }}
           fontSize={{ base: "10px", sm: "12px", md: "16px", lg: "20px" }}
         >
-          Please make payment before going to the registration page
+          Kindly complete payment before accessing the Register page.
         </Text>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
           <Button colorScheme='red' variant='solid' onClick={RedirectHandler}>

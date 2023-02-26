@@ -21,7 +21,6 @@ const RegistrationForm = () => {
   const name = useRef();
   const RollNo = useRef();
   const EmailId = useRef();
-  const PhoneNo = useRef();
   const Program = useRef();
   const Department = useRef();
   const YearOfJoining = useRef();
@@ -55,12 +54,9 @@ const RegistrationForm = () => {
     const ReceivedPayRec = PaymentReceipt.current.files[0];
 
     const PayRecRef = ref(storage, `paymentreceipt/${ReceivedRoll}`);
-    uploadBytes(PayRecRef, ReceivedPayRec).then(() => {
-      console.log("receipt uploaded successfully");
-    });
+    uploadBytes(PayRecRef, ReceivedPayRec)
 
-    let url =
-      "https://turs-details-default-rtdb.firebaseio.com/RegisteredMembers.json";
+    let url = process.env.REACT_APP_REAL_DB;
 
     fetch(url, {
       method: "POST",

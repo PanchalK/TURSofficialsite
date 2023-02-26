@@ -13,12 +13,13 @@ const TimelineItem = ({ data }) => {
         }}
         viewport={{ once: true }}
       >
-        <Text fontSize={{ base: "4px", sm: "8px", md: "12px", lg: "20px" }}>
+        <Text fontSize={{ base: "4px", sm: "8px", md: "12px", lg: "20px" }} textAlign="left">
           <strong>{data.title}</strong>
         </Text>
         <Text
           textAlign="justify"
           fontSize={{ base: "5px", sm: "10px", md: "15px", lg: "20px" }}
+          
         >
           {data.text}
         </Text>

@@ -6,6 +6,8 @@ import classes from "./RegistrationForm.module.css";
 import { storage } from "../Firebase";
 import { ref, uploadBytes } from "firebase/storage";
 import swal from 'sweetalert';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 import {
   Box,
   FormControl,
@@ -32,6 +34,7 @@ const RegistrationForm = () => {
   const History = useHistory();
 
   const [isLoading, LoadingHandler] = useState();
+  const [phoneValue, setPhoneValue] = useState();
 
   const SubmitHandler = (event) => {
     event.preventDefault();
@@ -41,7 +44,7 @@ const RegistrationForm = () => {
     const ReceivedName = name.current.value;
     const ReceivedRoll = RollNo.current.value;
     const ReceivedEmail = EmailId.current.value;
-    const ReceivedPhone = PhoneNo.current.value;
+    const ReceivedPhone = phoneValue;
     const Receivedprogram = Program.current.value;
     const ReceivedDepartment = Department.current.value;
     const ReceivedYearOfJoining = YearOfJoining.current.value;
@@ -153,12 +156,11 @@ const RegistrationForm = () => {
                   required
                 ></Input>
                 <FormLabel>Phone</FormLabel>
-                <Input
+                <PhoneInput
+                  defaultCountry="IN"
                   className={classes.input}
-                  type="text"
-                  ref={PhoneNo}
-                  required
-                ></Input>
+                  value={phoneValue}
+                  onChange={setPhoneValue}/>
                 <FormLabel>Program</FormLabel>
                 <Input
                   className={classes.input}

@@ -99,12 +99,14 @@
 
 @media only screen and (max-width: 480px ){
   .timeline-item-content {
-    margin-right: 57%;
-    margin-left: 10%;
+    width: 45vw;
+    margin-right: 58%;
+    margin-left: 2%;
 }
 .timeline-item:nth-child(odd) .timeline-item-content {
-  margin-left: 57%;
-  margin-right: 10%;
+  width: 45vw;
+  margin-left: 58%;
+  margin-right: 2%;
 }
   .timeline-item-content .date{
     left:144%;

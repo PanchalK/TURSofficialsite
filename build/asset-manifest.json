@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.48b7165e.css",
-    "main.js": "/static/js/main.fa8a9abe.js",
+    "main.css": "/static/css/main.85f6fc31.css",
+    "main.js": "/static/js/main.486c392c.js",
     "static/media/tu_logo.png": "/static/media/tu_logo.a47488c1fc7bfd2a02f3.png",
     "static/media/TURS2.png": "/static/media/TURS2.7bd66e7187ba72438f69.png",
     "index.html": "/index.html",
-    "main.48b7165e.css.map": "/static/css/main.48b7165e.css.map",
-    "main.fa8a9abe.js.map": "/static/js/main.fa8a9abe.js.map"
+    "main.85f6fc31.css.map": "/static/css/main.85f6fc31.css.map",
+    "main.486c392c.js.map": "/static/js/main.486c392c.js.map"
   },
   "entrypoints": [
-    "static/css/main.48b7165e.css",
-    "static/js/main.fa8a9abe.js"
+    "static/css/main.85f6fc31.css",
+    "static/js/main.486c392c.js"
   ]
 }

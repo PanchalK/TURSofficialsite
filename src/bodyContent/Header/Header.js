@@ -94,7 +94,11 @@ const Header = () => {
         </Flex>
       </Box>
       {Display && (
-        <div className={classes.backgrnd}>
+        <div className={classes.backgrnd} onClick={() => {
+          DisplayHandler(() => {
+            return false;
+          });
+        }}>
           <motion.div
             className={classes.sidebar}
             initial={{ opacity: 0 }}
@@ -104,10 +108,10 @@ const Header = () => {
           >
             <VStack
               w={{ base: "70vw", sm: "50vw" }}
-              h={{ base: "40vh", sm: "30vh" }}
               backgroundColor=" #212F3D"
               display={Display ? "flex" : "none"}
               p="1%"
+              className={classes.sidebarVStack}
             >
               {Display && (
                 <Flex justify="flex-end" mt="10px">
@@ -157,7 +161,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.5 },
+                  transition: { duration: 1, type: "spring", delay: 0.2 },
                 }}
               >
                 <NavLink
@@ -178,7 +182,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.6 },
+                  transition: { duration: 1, type: "spring", delay: 0.3 },
                 }}
               >
                 <NavLink
@@ -199,7 +203,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.7 },
+                  transition: { duration: 1, type: "spring", delay: 0.4 },
                 }}
               >
                 <NavLink
@@ -219,7 +223,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.8 },
+                  transition: { duration: 1, type: "spring", delay: 0.5 },
                 }}
               >
                 <NavLink
@@ -231,7 +235,7 @@ const Header = () => {
                     });
                   }}
                 >
-                  <Text pt={{base:"10px",md:"15px"}} fontFamily="'Josefin Sans', sans-serif">Blog</Text>
+                  <Text pt={{base:"10px",md:"15px"}} pb={{base:"20px",md:"20px"}} fontFamily="'Josefin Sans', sans-serif">Resources</Text>
                 </NavLink>
               </motion.div>
             </VStack>

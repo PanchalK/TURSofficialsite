@@ -13,20 +13,19 @@ const TimelineItem = ({ data }) => {
         }}
         viewport={{ once: true }}
       >
-        <Text fontSize={{ base: "4px", sm: "8px", md: "12px", lg: "20px" }} textAlign="left">
+        <Text fontSize={{ base: "12px", sm: "14px", md: "15px", lg: "20px" }} textAlign="left">
           <strong>{data.title}</strong>
         </Text>
         <Text
-          textAlign="justify"
-          fontSize={{ base: "5px", sm: "10px", md: "15px", lg: "20px" }}
-          
+          fontSize={{ base: "11px", sm: "13px", md: "14px", lg: "20px" }}
+          textAlign="inherit"
         >
           {data.text}
         </Text>
         <Heading
           color="white"
           className={classes.date}
-          fontSize={{ base: "10px", sm: "15px", md: "20px", lg: "25px" }}
+          fontSize={{ base: "15px", sm: "19px", md: "20px", lg: "25px" }}
         >
           {data.date}
         </Heading>

@@ -120,7 +120,7 @@ const RegistrationForm = () => {
             mb={{ base: "5%", sm: "4%", md: "3%", lg: "2%" }}
             fontFamily="'Josefin Sans', sans-serif"
           >
-            Fill this registration form to join TUSC
+            Fill this registration form to join TURS
           </Text>
           <VStack
             className={classes.content}

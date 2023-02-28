@@ -78,7 +78,7 @@ const Team = () => {
         <Flex
           justify="space-between"
           flexWrap="wrap"
-          w={{ base: "90vw", sm: "90vw", md: "80vw", lg: "70vw" }}
+          w={{ base: "85vw", sm: "85vw", md: "80vw", lg: "70vw" }}
           m="auto"
         >
           <FacultyCard images={facultyimages} />

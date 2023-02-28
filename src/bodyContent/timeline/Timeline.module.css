@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 * {
 	box-sizing: border-box;
 }
@@ -8,7 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Lato', sans-serif;
 	margin: 0;
 }
 .hzrow{
@@ -97,14 +99,12 @@
 
 @media only screen and (max-width: 480px ){
   .timeline-item-content {
-    width: 45vw;
     margin-right: 57%;
-    margin-left: 2%;
+    margin-left: 10%;
 }
 .timeline-item:nth-child(odd) .timeline-item-content {
-  width: 45vw;
-  margin-left: 58%;
-  margin-right: 2%;
+  margin-left: 57%;
+  margin-right: 10%;
 }
   .timeline-item-content .date{
     left:144%;

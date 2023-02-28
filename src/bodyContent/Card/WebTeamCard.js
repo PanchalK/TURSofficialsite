@@ -54,6 +54,8 @@ const Card = (props) => {
                 image={props.images[index]}
                 name={data.name}
                 post={data.post}
+                email={data.email}
+                linkedin={data.linkedin}
               />
             );
           })}

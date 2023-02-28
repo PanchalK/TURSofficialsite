@@ -10,7 +10,6 @@ const db = StartFirebase();
 
 const Timeline = () => {
   const [timelineData, setTimelineData] = useState([]);
-  console.log(timelineData);
   useEffect(() => {
     let records = [];
     const dbRef = ref(db, "UpcomingEvents");

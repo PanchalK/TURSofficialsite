@@ -24,7 +24,7 @@ const Timeline = () => {
   return (
     <div className={classes.Body}>
       <Heading
-        fontSize={{ base: "lg", sm: "xl", md: "3xl", lg: "3xl" }}
+        fontSize={{ base: "md", sm: "lg", md: "2xl", lg: "3xl" }}
         pt={{ base: "2%", sm: "3%", md: "4%", lg: "4%" }}
         pb={{ base: "2%", sm: "3%", md: "4%", lg: "4%" }}
         color="white"
@@ -35,7 +35,7 @@ const Timeline = () => {
       <Flex
         className={classes["timeline-container"]}
         direction="column"
-        w={{ base: "90vw", sm: "90vw", md: "80vw", lg: "80vw" }}
+        w={{ base: "95vw", sm: "93vw", md: "80vw", lg: "80vw" }}
         mt={{ base: "2%", sm: "4%", md: "5%", lg: "6%" }}
         mb={{ base: "2%", sm: "4%", md: "5%", lg: "6%" }}
       >

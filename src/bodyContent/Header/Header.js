@@ -104,10 +104,11 @@ const Header = () => {
           >
             <VStack
               w={{ base: "70vw", sm: "50vw" }}
-              h={{ base: "40vh", sm: "30vh" }}
+              h={{ base: "40vh", sm: "40vh" }}
               backgroundColor=" #212F3D"
               display={Display ? "flex" : "none"}
               p="1%"
+              className={classes.sidebarVStack}
             >
               {Display && (
                 <Flex justify="flex-end" mt="10px">
@@ -136,7 +137,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.1 },
+                  transition: { duration: .7, type: "spring", delay: 0.1 },
                 }}
               >
                 <NavLink
@@ -157,7 +158,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.5 },
+                  transition: { duration: .7, type: "spring", delay: 0.2 },
                 }}
               >
                 <NavLink
@@ -178,7 +179,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.6 },
+                  transition: { duration: .7, type: "spring", delay: 0.3 },
                 }}
               >
                 <NavLink
@@ -199,7 +200,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.7 },
+                  transition: { duration: .7, type: "spring", delay: 0.4 },
                 }}
               >
                 <NavLink
@@ -219,7 +220,7 @@ const Header = () => {
                 whileInView={{
                   opacity: 1,
                   x: [-90, 0],
-                  transition: { duration: 1, type: "spring", delay: 0.8 },
+                  transition: { duration: .7, type: "spring", delay: 0.5 },
                 }}
               >
                 <NavLink

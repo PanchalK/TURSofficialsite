@@ -1,9 +1,10 @@
 .sidebar{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   box-shadow: 0px 0px 8px 3px rgb(40, 40, 40);
 }
+
 
 .backgrnd{
   position: absolute;
@@ -77,4 +78,12 @@
     padding-top: "10px"
   }
 }
+
+@media only screen and (max-height: 900px){
+  .sidebarVStack{
+    height: 34vh;
+  }
+
+}
+
 

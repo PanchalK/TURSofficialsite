@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <>
       <VStack className={classes.layer2bg} id="about">
-        <Heading fontSize={{ base: "md", sm: "2xl", md: "3xl", lg: "3xl" }} mt={{lg:"8%"}} fontFamily="'Josefin Sans', sans-serif">
+        <Heading fontSize={{ base: "md", sm: "xl", md: "3xl", lg: "3xl" }} mt={{lg:"8%"}} fontFamily="'Josefin Sans', sans-serif">
           HELLO THERE
         </Heading>
         <Text fontSize={{ base: "2xl", sm: "3xl", md: "4xl", lg: "5xl" }} fontFamily="'Josefin Sans', sans-serif" color="white">

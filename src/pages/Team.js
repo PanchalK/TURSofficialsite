@@ -76,9 +76,9 @@ const Team = () => {
       <hr className={classes.styletwo}></hr>
         
         <Flex
-          justify="space-between"
+          justify="space-evenly"
           flexWrap="wrap"
-          w={{ base: "90vw", sm: "90vw", md: "80vw", lg: "70vw" }}
+          w={{ base: "90vw", sm: "90vw", md: "80vw", lg: "75vw" }}
           m="auto"
         >
           <FacultyCard images={facultyimages} />

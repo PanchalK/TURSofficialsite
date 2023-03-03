@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.85f6fc31.css",
-    "main.js": "/static/js/main.486c392c.js",
+    "main.js": "/static/js/main.702228a1.js",
+    "static/media/turs_logo.png": "/static/media/turs_logo.cb62f3600e8aedba9521.png",
     "static/media/tu_logo.png": "/static/media/tu_logo.a47488c1fc7bfd2a02f3.png",
     "static/media/TURS2.png": "/static/media/TURS2.7bd66e7187ba72438f69.png",
     "index.html": "/index.html",
     "main.85f6fc31.css.map": "/static/css/main.85f6fc31.css.map",
-    "main.486c392c.js.map": "/static/js/main.486c392c.js.map"
+    "main.702228a1.js.map": "/static/js/main.702228a1.js.map"
   },
   "entrypoints": [
     "static/css/main.85f6fc31.css",
-    "static/js/main.486c392c.js"
+    "static/js/main.702228a1.js"
   ]
 }
